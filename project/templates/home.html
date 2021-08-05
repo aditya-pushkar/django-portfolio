@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- ######################################### INTRO SECTION ####################################### -->
+    <div class="first-box">
+        <main class="main-container home-section" >
+            <section id="home">
+                <div class="landing-page-details">
+                    <h1 class="small-title white " id="h11">Hi, my name is</h1>
+                    <h2 class="big-title my-name pink">Aditya</h2>
+                    <h3 class="big-title white">I am a full stack Web Developer </h3>
+                    <div class="short-bio">
+                        <img src="{% static 'images/hello.svg' %}" alt="Hello">
+                        <p class="white">I help companies to design digital products
+                            and turn ideas into delightful experience
+                            .</p>
+                    </div>
+                    <div class="cta-container email-container">
+                        <a href="mail" class="cta email-button">
+                            <img src="{% static 'images/email.svg' %}" alt="Email Icon">
+                            <span id="email-hover-text">hello@adityapushkar.net</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- ######################################### INTRO SECTION END ####################################### -->
+
+
+    <!-- ######################################### PORTFOLIO SECTION ####################################### -->
+
+    <section class="projects" id="select-projects">
+        <h2 class="colr">Portfolio</h2>
+        <p class="section-description">
+            Here are some of the projects I have worked on.<br>
+            You can find more below <a class="hyperlink" href="https://github.com/aditya-pushkar">GitHub</a>.
+        </p>
+
+        <div class="project-cards-container " id="portfolio-bg">
+            {% for item in item%}
+            <div class="card">
+                <img src="{{ item.img.url}}" alt="Project Preview Screenshot" class="card-preview-img">
+                <div class="card-info">
+                    <div class="title-and-links">
+                        <span class="project-title">
+                            {{item.title}}
+                        </span>
+                        <div class="project-links">
+                            <a href="{{item.website_link}}">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="{{item.github_link}}">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-skills">
+                        <span>{{item.tag1}}</span>
+
+                        {% if item.tag2 != None %}
+                            <span>{{item.tag2}}</span>
+                        {% endif %}
+                        {% if item.tag3 != None %}
+                            <span>{{item.tag3}}</span>
+                        {% endif %}
+                        {% if item.tag4 != None %}
+                            <span>{{item.tag4}}</span>
+                        {% endif %}
+                    </div>
+                    <p class="project-description">
+                    <p style="font-size: 14px; font-weight: 100; letter-spacing: 1px; text-align: left;">{{item.description}}</p>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="cta-container">
+            <a href="{% url 'portfolio' %}" class="explore-cta">
+                Explore More
+            </a>
+        </div>
+    </section>
+    <!-- ######################################### PORTFOLIO SECTION END ####################################### -->
+
+
+    <!-- ######################################### TECK_STACK SECTION ########################################### -->
+    <div class="techstack">
+        <a name="tech"></a>
+        <section id="tech-stack">
+            <h2 class="colr" style="padding-top: 0px;">Tech Stack</h2>
+            <div class="tech-stack-container">
+                {% for item in tech%}
+                <div class="skill">
+                    <img src="{{ item.img.url}}" alt="Icon"><span>{{item.tech_title}}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+    </div>
+    <!-- ######################################### TECK_STACK SECTION END ################################################## -->
+
+    <!-- ########################################################### START CONTACT FORM #################################### -->
+    <div class="contact-body" id="form-ss">
+        <div class="contact-container">
+            <span class="big-circle"></span>
+            <img src="img/shape.png" class="square" alt="" />
+            <div class="form">
+                <div class="contact-info">
+                    <h3 class="form-title">Let's get in touch</h3>
+                    <p class="text">
+                        Get in touch with me through email.  
+                        I will get back to you as soon as possible.  
+                    </p>
+                
+                    <div class="info">
+                        <div class="information">
+                            <img src="{% static 'images/undraw_map_1r69.svg' %}" class="icon" alt="" />
+                            <p>New Delh, India</p>
+                        </div>
+                        <div class="information">
+                            <img src="{% static 'images/undraw_Mail_sent_re_0ofv.svg' %}" class="icon" alt="" />
+                            <p>hello@adityapushkar.net</p>
+                        </div>
+                        <div class="information">
+                            <img src="{% static 'images/undraw_calling_kpbp.svg' %}" class="icon" alt="" />
+                            <p>8130-855-845</p>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <p>Connect with us :</p>
+                        <div class="social-icons-form">
+                            <a href="#">
+                                <i class="fab fa-facebook-f" id="social-color"></i>
+                            </a>
+                            <a  href="https://twitter.com/aditya_pushkar_">
+                                <i  class="fab fa-twitter" id="social-color"></i>
+                            </a>
+                            <a  href="https://www.instagram.com/">
+                                <i class="fab fa-instagram" id="social-color"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-linkedin-in" id="social-color"></i>
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+                    
+                    
+                    <form  method="POST" action="{% url 'send_email'%}">
+                        {% csrf_token %} 
+                        <a name="contact"></a> 
+                        <h3 class="form-title">Contact me</h3>
+                        <div class="input-container">
+                            <input type="text" name="name" class="input" />
+                            <label for="">Name</label>
+                            <span>Name</span>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" name="email" class="input" />
+                            <label for="">Email</label>
+                            <span>Email</span>
+                        </div>
+                        <div class="input-container">
+                            <input type="tel" name="subject" class="input" />
+                            <label for="">Subject</label>
+                            <span>Subject</span>
+                        </div>
+                        <div class="input-container textarea">
+                            <textarea name="message" class="input"></textarea>
+                            <label for="">Message</label>
+                            <span>Message</span>
+                        </div>
+                        <input type="submit" value="Send" class="contact-btn" /></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- ########################################################### END CONTACT FORM ###################################### -->
+
+{% endblock %}

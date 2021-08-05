@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<!-- <link rel="stylesheet" href="{% static 'css/about.css' %}"> -->
+
+    <section class="projects aboutmy" id="select-projects" style="padding-top: 100px;">
+        <h2 class="colr">About Me</h2>
+        <p class="section-description" style="font-size: 18px; text-align: left; margin-left: 0%;">
+            I’m a Full-Stack Web Developer located in India with more than five years
+            of experience. And I have a serious passion of building a Project which
+            impact's thousands of people's life and love to work with latest technologies.
+            Well-organized person, problem solver, independent employee with high attention
+            to detail. Interested in the Full-Stack spectrum and working on ambitious projects
+            with positive people.
+
+        </p>
+        <ul class="unorderd-list">
+
+            <li>
+                <p class="list-heading ">Responsiblity</p>
+            </li>
+            <li>
+                <p class="list" style="margin-top: 30px;">. Design and Implement Architecture solutions</p>
+            </li>
+            <li>
+                <p class="list">. Contribute in all phases of the development lifecycle</p>
+            </li>
+            <li>
+                <p class="list">. Able to make sure that the platforms keep up with high
+                standards of scalability, stability, security, and performance.</p>
+            </li>
+            <li>
+                <p class="list">. Convey effectively all task progress, evaluations, suggestions, schedules along with technical and process issues.</p>
+            </li>
+            <li>
+                <p class="list">. Mentor peers</p>
+            </li>
+            <li>
+                <p class="list">. Troubleshooting bug reports and help to establish ambitious goals to improve our codebase in general.</p>
+            </li>
+            <li>
+                <p class="list">. You can find my Tech Stack <a href="{% url 'home' %}#tech"style="text-decoration: underline; color: rgb(0, 31, 97);">HERE</a></p>
+            </li>
+
+        </ul>
+
+
+        <h3 style="margin-top: 100px; ">Let’s make something special.</h3>
+    </section>
+
+{% endblock %}

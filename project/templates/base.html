@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aditya pushkar</title>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="{% static 'images/ap.png' %}" type="image/png" sizes="1" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+
+    <!-- ##################################  INTRO CONTAINER CSS  ################################################ -->
+    <link rel="stylesheet" href="{% static 'css/intro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/intro-main.css' %}">
+
+    <!-- ##################################  PORTFOLIO CONTAINER CSS  ################################################ -->
+    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+
+    <!-- ############################################################ TECH STACK CSS ####################################### -->
+    <link rel="stylesheet" href="{% static 'css/tech-stack.css' %}">
+
+    <!-- ##################################### CONTACT CSS ################################## -->
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+    <!-- ############################################################ FOOTER CSS ####################################### -->
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    
+    <!-- ############################################################ ABOUT CSS ####################################### -->
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <!-- ##################################  HEADER  ################################################ -->
+
+    <header class="navbar desktop-menu">
+        <div class="logo">
+            <!-- <h3 style="font-size: 20px; font-family: 'WindSong', cursive; color: white;">aditya pushkar</h3> -->
+            <a href="{% url 'home' %}"
+                style="font-size: 20px; font-family: 'WindSong', cursive; color: white; text-decoration: none;">
+                aditya pushkar</a>
+        </div>
+        <div id="menuSection" class="menu-sec">
+            <ul class="nav-menu">
+                <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'home' %}#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="https://twitter.com/aditya_pushkar_"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/aditya-pushkar"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-rss"></i></a>
+        </div>
+    </header>
+    
+    <div onclick="closeMobMenuToggle()" id="mobMenuCont" class="mob-menu-container">
+        <img src="{% static 'images/icons8-circled-x-50.png' %}" alt="close-icon" />
+    </div>
+    <div id="mobMenuWrap" class="mob-menu-wrap">
+        <div class="menu-content">
+            <div class="menu-items">
+                <ul class="nav-menu">
+                    <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                    <li><a href="{% url 'home' %}#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social-items">
+                <div class="social-icons">
+                    <a href="https://twitter.com/aditya_pushkar_"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/aditya-pushkar"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-rss"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="logo">
+            <!-- <a href="#"><img src="" alt="my-logo"/></a> -->
+            <h3 style="font-size: 15px; font-family: 'WindSong', cursive; color: white;">aditya pushkar</h3>
+        </div>
+        <img src="{% static 'images/mobile-menu.svg' %}" onclick="mobMenuToggle()" class="menu">
+        <!-- <button onclick="mobMenuToggle()" class="menu" style=" font-family: 'Amsterdam One'">Menu</button> -->
+    </div>
+</head>
+
+<body>
+
+    {% block content%}
+    {% endblock %}
+
+
+    <!-- ############################################################ FOOTER START ######################################### -->
+
+    <footer class="footer-container" id="about-page-footer">
+        <div class="footer">
+            <div class="footer-column">
+                <a href="/" class="footer-logo"></a>
+                <div class="socials">
+                    <ul>
+
+                        <li class="logo">
+                            <!-- <img src="{% static 'images/footer-logo.png' %}" alt="logo" srcset=""> -->
+                            <h3 translate="no"style="font-size: 15px; font-family: 'WindSong', cursive;"><a 
+                                style="text-decoration: none" href="{% url 'home' %}">aditya pushkar</h3></a>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <li class="social-link">
+                            <a href="https://github.com/aditya-pushkar" aria-label="GitHub" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="social-link">
+                            <a href="mailto:hello@adityapushkar.net" aria-label="Email">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-column">
+                <a href="{% url 'about' %}" class="footer-button">
+                    About
+                </a>
+                <a href="/portfolio" class="footer-button">
+                    Upwork
+                </a>
+                <a href="#" class="footer-button">
+                    Fiverr
+                </a>
+            </div>
+            <div class="footer-column">
+
+                <a href="/blog" class="footer-button">
+                    Blog
+                </a>
+                <a href="{% url 'home' %}#contact" class="footer-button">
+                    Contact
+                </a>
+                <a href="{% url 'portfolio' %}" class="footer-button">
+                    Portfolio
+                </a>
+            </div>
+            <div class="footer-column">
+                <a href="#" class="footer-button">
+                    Music
+                </a>
+                <a href="#" class="footer-button">
+                    Hiring
+                </a>
+                <a href="#" class="footer-button">
+                    Updates
+                </a>
+            </div>
+        </div>
+        <div style=" text-align: center; border-top: solid 0.1px; margin-top: 0.25%;">
+         <ul style="padding-top: 5px; font-size: 9px;">Copyright © 2021 aditya-pushkar All rights reserved</ul>
+        </div>
+    </footer>
+    <!-- ############################################################ FOOTER END ######################################### -->
+
+
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    <!-- <script src="app.js"></script> -->
+
+</body>
+
+</html>

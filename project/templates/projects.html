@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<!-- ######################################### PORTFOLIO SECTION ####################################### -->
+    <section class="projects" id="select-projects">
+        <h2 class="colr">Portfolio</h2>
+        <div class="project-cards-container " id="portfolio-bg">
+            {% for item in projects%}
+            <div class="card">
+                <img src="{{ item.img.url}}" alt="Project Preview Screenshot" class="card-preview-img">
+                <div class="card-info">
+                    <div class="title-and-links">
+                        <span class="project-title">
+                            {{item.title}}
+                        </span>
+                        <div class="project-links">
+                            <a href="{{item.website_link}}">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="{{item.github_link}}">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-skills">
+                        <span>{{item.tag1}}</span>
+
+                        {% if item.tag2 != None %}
+                            <span>{{item.tag2}}</span>
+                        {% endif %}
+                        {% if item.tag3 != None %}
+                            <span>{{item.tag3}}</span>
+                        {% endif %}
+                        {% if item.tag4 != None %}
+                            <span>{{item.tag4}}</span>
+                        {% endif %}
+                    </div>
+                    <p class="project-description">
+                    <p style="font-size: 14px; font-weight: 100; letter-spacing: 1px; text-align: left;">{{item.description}}</p>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+    </section>
+    <!-- ######################################### PORTFOLIO SECTION END ####################################### -->
+
+{% endblock %}
