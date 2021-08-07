@@ -16,6 +16,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['35.194.21.244', 'adityapushkar.co']
 
+# ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -37,6 +38,7 @@ MIDDLEWARE = [
 
 
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -138,6 +140,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = 'static/images'
+STATIC_ROOT = 'staticfiles'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

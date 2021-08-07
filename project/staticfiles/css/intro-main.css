@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+/* body {
+    background-color: #1D263B;
+} */
+
+.white{
+    color: white;
+}
+
+h1, h2, h3 {
+    font-family: 'Fira Code', monospace;
+}
+
+h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+h3 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+a, span {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-underline-offset: unset;
+}
+
+.green {
+    color: rgb(0, 16, 97);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.pink {
+    font-family: 'Fira Code', monospace;
+    font-size: 3.25em;
+    font-weight: 700;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.main-container {
+    margin: 0 auto;
+    padding: 0 25px;
+    text-align: center;
+    max-width: 1600px;
+}
+
+section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-top: 100px;
+}
+
+section .hyperlink {
+    color: rgb(0, 31, 97);
+    font-weight: 700;
+    text-decoration: unset;
+    transition: all 0.2s ease;
+}
+
+section .hyperlink:hover {
+    color: black;
+}
+
+.section-description {
+    margin: 50px auto 0 auto;
+    text-align: center;
+    max-width: 1000px;
+    line-height: 1.5em;
+    letter-spacing: 0.025em;
+}
+
+.page-title {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title img {
+    height: 40px;
+    width: auto;
+    margin-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    h2 {
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+    .big-title {
+        margin: 0;
+        text-align: left;
+        font-size: 1.80em;
+        word-spacing: 1px;
+    }
+
+    .first-box{
+        margin-top: -100px;
+    }
+
+}
