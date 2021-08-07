@@ -9,12 +9,12 @@
     <title>aditya pushkar</title>
 
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="{% static 'images/ap.png' %}" type="image/png" sizes="1" >
+    <link rel="icon" href="{% static 'images/ap.png' %}" type="image/png" sizes="1">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
-    
+
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
@@ -35,13 +35,17 @@
 
     <!-- ############################################################ FOOTER CSS ####################################### -->
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
-    
+
     <!-- ############################################################ ABOUT CSS ####################################### -->
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
 
+</head>
+
+<body>
+
     <!-- ##################################  HEADER  ################################################ -->
 
-    <header class="navbar desktop-menu">
+    <div class="navbar desktop-menu">
         <div class="logo">
             <!-- <h3 style="font-size: 20px; font-family: 'WindSong', cursive; color: white;">aditya pushkar</h3> -->
             <a href="{% url 'home' %}"
@@ -62,8 +66,8 @@
             <a href="https://github.com/aditya-pushkar"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fas fa-rss"></i></a>
         </div>
-    </header>
-    
+    </div>
+
     <div onclick="closeMobMenuToggle()" id="mobMenuCont" class="mob-menu-container">
         <img src="{% static 'images/icons8-circled-x-50.png' %}" alt="close-icon" />
     </div>
@@ -95,9 +99,6 @@
         <img src="{% static 'images/mobile-menu.svg' %}" onclick="mobMenuToggle()" class="menu">
         <!-- <button onclick="mobMenuToggle()" class="menu" style=" font-family: 'Amsterdam One'">Menu</button> -->
     </div>
-</head>
-
-<body>
 
     {% block content%}
     {% endblock %}
@@ -114,8 +115,8 @@
 
                         <li class="logo">
                             <!-- <img src="{% static 'images/footer-logo.png' %}" alt="logo" srcset=""> -->
-                            <h3 translate="no"style="font-size: 15px; font-family: 'WindSong', cursive;"><a 
-                                style="text-decoration: none" href="{% url 'home' %}">aditya pushkar</h3></a>
+                            <h3 translate="no" style="font-size: 15px; font-family: 'WindSong', cursive;"><a
+                                    style="text-decoration: none" href="{% url 'home' %}">aditya pushkar</h3></a>
                         </li>
 
                     </ul>
@@ -170,7 +171,7 @@
             </div>
         </div>
         <div style=" text-align: center; border-top: solid 0.1px; margin-top: 0.25%;">
-         <ul style="padding-top: 5px; font-size: 9px;">Copyright © 2021 aditya-pushkar All rights reserved</ul>
+            <ul style="padding-top: 5px; font-size: 9px;">Copyright © 2021 aditya-pushkar All rights reserved</ul>
         </div>
     </footer>
     <!-- ############################################################ FOOTER END ######################################### -->
