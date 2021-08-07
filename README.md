@@ -1,9 +1,12 @@
 # django-portfolio
 
-step 1st == cd django-project
-step 2nd == pip install virtualenv 
+This is my personal portfolio made with Django.
+
+All steps below>>>>>>.
+
+cd django-ppip install virtualenv 
 step 3rd == source env/Scripts/activate {linux}
-step 4th == pip install -r requirements.txt 
+pip install -r requirements.txt 
 cd project
 python manage.py makemigrations 
 python manage.py migrate 
