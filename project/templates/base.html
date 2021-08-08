@@ -90,7 +90,7 @@
     <div class="mobile-menu">
         <div class="logo">
             <!-- <a href="#"><img src="" alt="my-logo"/></a> -->
-            <h3 style="font-size: 15px; font-family: 'WindSong', cursive; color: white;">aditya pushkar</h3>
+            <h3 style="font-size: 18px; font-family: 'WindSong', cursive; color: white;">aditya pushkar</h3>
         </div>
         <img src="{% static 'images/mobile-menu.svg' %}" onclick="mobMenuToggle()" class="menu">
         <!-- <button onclick="mobMenuToggle()" class="menu" style=" font-family: 'Amsterdam One'">Menu</button> -->
@@ -126,7 +126,7 @@
                             </a>
                         </li>
                         <li class="social-link">
-                            <a href="mailto:hello@adityapushkar.net" aria-label="Email">
+                            <a href="mailto:hello@adityapushkar.co" aria-label="Email">
                                 <i class="far fa-envelope"></i>
                             </a>
                         </li>
@@ -146,18 +146,6 @@
                 </a>
             </div>
             <div class="footer-column">
-
-                <a href="/blog" class="footer-button">
-                    Blog
-                </a>
-                <a href="{% url 'home' %}#contact" class="footer-button">
-                    Contact
-                </a>
-                <a href="{% url 'portfolio' %}" class="footer-button">
-                    Portfolio
-                </a>
-            </div>
-            <div class="footer-column">
                 <a href="#" class="footer-button">
                     Music
                 </a>
@@ -168,6 +156,18 @@
                     Updates
                 </a>
             </div>
+            <div class="footer-column">
+                <a href="/blog" class="footer-button">
+                    Blog
+                </a>
+                <a href="{% url 'home' %}#contact" class="footer-button">
+                    Contact
+                </a>
+                <a href="{% url 'portfolio' %}" class="footer-button">
+                    Portfolio
+                </a>
+            </div>
+            
         </div>
         <div style=" text-align: center; border-top: solid 0.1px; margin-top: 0.25%;">
          <ul style="padding-top: 5px; font-size: 9px;">Copyright © 2021 aditya-pushkar All rights reserved</ul>

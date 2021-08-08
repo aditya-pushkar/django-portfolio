@@ -19,10 +19,12 @@
 }
 
 .landing-page-details {
-    margin: auto 0;
+    /* margin: auto 0; */
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 /* .landing-page-socials ul {
@@ -160,7 +162,9 @@
     #home {
         flex-direction: row;
     }
-    /* .main-container home-section{
-        margin-top: 10px;
-    } */
+    .landing-page-details {
+        margin-top: 70px;
+    }
+    
+    
 }

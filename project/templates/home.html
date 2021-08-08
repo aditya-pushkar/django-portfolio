@@ -17,7 +17,7 @@
                             .</p>
                     </div>
                     <div class="cta-container email-container">
-                        <a href="mail" class="cta email-button">
+                        <a href="mailto:hello@adityapushkar.co" class="cta email-button">
                             <img src="{% static 'images/email.svg' %}" alt="Email Icon">
                             <span id="email-hover-text">hello@adityapushkar.co</span>
                         </a>
@@ -93,7 +93,7 @@
             <div class="tech-stack-container">
                 {% for item in tech%}
                 <div class="skill">
-                    <img src="{{ item.img.url}}" alt="Icon"><span>{{item.tech_title}}</span>
+                    <img src="{{ item.img.url}}" alt="Icon" style=" height: 25px; width: 25px;"><span>{{item.tech_title}}</span>
                 </div>
                 {% endfor %}
             </div>
@@ -170,7 +170,7 @@
                             <span>Email</span>
                         </div>
                         <div class="input-container">
-                            <input type="tel" name="subject" class="input" />
+                            <input type="text" name="subject" class="input" />
                             <label for="">Subject</label>
                             <span>Subject</span>
                         </div>
