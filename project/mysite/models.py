@@ -28,4 +28,7 @@ class TeckStack(models.Model):
     class Meta:
         ordering = ['len_stack']
 
+    def __str__(self):
+        return self.tech_title
+
     

@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-fc(c!g4s@(f07m)xnesnu#0f!9fv334*bx=+d-&&8q)cllhh#o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['35.194.21.244', 'adityapushkar.co']
+ALLOWED_HOSTS = ['35.194.21.244', 'adityapushkar.co', '127.0.0.1']
 
 # ALLOWED_HOSTS = []
 
@@ -22,7 +22,6 @@ ALLOWED_HOSTS = ['35.194.21.244', 'adityapushkar.co']
 
 INSTALLED_APPS = [
     'corsheaders',
-    'mysite.apps.MysiteConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -30,6 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'mysite.apps.MysiteConfig',
+    'storages'
 
 ]
 
@@ -142,6 +144,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = 'static/images'
 STATIC_ROOT = 'staticfiles'
 
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -153,3 +156,13 @@ EMAIL_HOST_PASSWORD = 'iwantflyinair@30!##=WAQa123'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# store sttic file to S3 Bucket 
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_QUERYSTRING_AUTH = False
+
+AWS_ACCESS_KEY_ID = 'AKIATRMYSLVGTN4NOFSV'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME  = 'adityapushkar'
+
