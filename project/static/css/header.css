@@ -219,6 +219,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: fixed;
   }
   .mob-menu-wrap .menu-content .menu-items {
     margin-top: 40px;
