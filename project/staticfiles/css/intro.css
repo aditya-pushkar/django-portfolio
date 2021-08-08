@@ -20,7 +20,7 @@
 
 .landing-page-details {
     /* margin: auto 0; */
-    margin-top: 40px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,9 +161,6 @@
     }
     #home {
         flex-direction: row;
-    }
-    .landing-page-details {
-        margin-top: 70px;
     }
     
     

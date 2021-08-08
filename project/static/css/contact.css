@@ -338,7 +338,7 @@ textarea.input {
     padding: 1.5rem 0 0 0;
   }
   .contact-body, input, textarea {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 }
 

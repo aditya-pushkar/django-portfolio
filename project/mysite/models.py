@@ -26,7 +26,7 @@ class TeckStack(models.Model):
     len_stack = models.IntegerField(null=False)
 
     class Meta:
-        ordering = ['len_stack']
+        ordering = ['-len_stack']
 
     def __str__(self):
         return self.tech_title
