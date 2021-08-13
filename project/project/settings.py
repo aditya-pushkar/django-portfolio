@@ -1,4 +1,6 @@
 from pathlib import Path
+from decouple import config
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -12,9 +14,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fc(c!g4s@(f07m)xnesnu#0f!9fv334*bx=+d-&&8q)cllhh#o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ['35.194.21.244', 'adityapushkar.co']
+DEBUG = config('DEBUG', default=False, cast=bool)
+
+ALLOWED_HOSTS = ["34.66.70.190",]
+
+ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
+
+WSGI_APPLICATION = f'{config("PROJECT_NAME")}.wsgi.application'
+
+ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
+
+
 
 # ALLOWED_HOSTS = []
 
@@ -49,7 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'project.urls'
+# ROOT_URLCONF = 'project.urls'
 CORS_ALLOW_ALL_ORIGINS = True
 
 
@@ -72,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project.wsgi.application'
+# WSGI_APPLICATION = 'project.wsgi.application'
 
 
 # Database
@@ -85,14 +96,25 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'djangoportfolio',
+#         'USER': 'adityapushkar',
+#         'PASSWORD': 'pushkarAditya992135',
+#         'HOST': 'djangoportfolio.cchtfjexgv2b.us-east-2.rds.amazonaws.com',
+#         'POST': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangoportfolio',
-        'USER': 'adityapushkar',
-        'PASSWORD': 'pushkarAditya992135',
-        'HOST': 'djangoportfolio.cchtfjexgv2b.us-east-2.rds.amazonaws.com',
-        'POST': '5432',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config("DB_NAME"),
+        'USER': config("DB_USER"),
+        'PASSWORD': config("DB_PASSWORD"),
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -165,4 +187,6 @@ AWS_QUERYSTRING_AUTH = False
 AWS_ACCESS_KEY_ID = 'AKIATRMYSLVGTN4NOFSV'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME  = 'adityapushkar'
+
+BASE_URL = "http://34.66.70.190"
 
