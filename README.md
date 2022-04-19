@@ -2,12 +2,12 @@
 
 This is my personal portfolio made with Django.
 
-All steps below>>>>>>.
+<h1>Run Locally>>>>>></h1>
 
-cd django-ppip install virtualenv 
-source env/Scripts/activate {linux}
-pip install -r requirements.txt 
-cd project
-python manage.py makemigrations 
-python manage.py migrate 
-python manage.py runserver 
+<p>pip install virtualenv 
+<p>source env/Scripts/activate  (linux/ unix)
+<p>pip install -r requirements.txt 
+<p>cd project
+<p>python manage.py makemigrations 
+<p>python manage.py migrate 
+<p>python manage.py runserver 
