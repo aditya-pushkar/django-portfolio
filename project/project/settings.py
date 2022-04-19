@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangoportfolio',
-        'USER': 'adityapushkar',
-        'PASSWORD': 'pushkarAditya992135',
-        'HOST': 'djangoportfolio.cchtfjexgv2b.us-east-2.rds.amazonaws.com',
+        'NAME': 'nameoftheproject',
+        'USER': 'username',
+        'PASSWORD': '',
+        'HOST': 'aws-db-host',
         'POST': '5432',
     }
 }
@@ -149,8 +149,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'adityapushkar850@gmail.com'
-EMAIL_HOST_PASSWORD = 'iwantflyinair@30!##=WAQa123'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = ''
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -162,7 +162,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 AWS_QUERYSTRING_AUTH = False
 
-AWS_ACCESS_KEY_ID = 'AKIATRMYSLVGTN4NOFSV'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME  = 'adityapushkar'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
+AWS_STORAGE_BUCKET_NAME  = ''
 
