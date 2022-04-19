@@ -4,10 +4,10 @@ This is my personal portfolio made with Django.
 
 <h1>Run Locally>>>>>></h1>
 
-<p>pip install virtualenv 
+<p>pip3 install virtualenv 
 <p>source env/Scripts/activate  (linux/ unix)
-<p>pip install -r requirements.txt 
+<p>pip3 install -r requirements.txt 
 <p>cd project
-<p>python manage.py makemigrations 
-<p>python manage.py migrate 
-<p>python manage.py runserver 
+<p>python3 manage.py makemigrations 
+<p>python3 manage.py migrate 
+<p>python3 manage.py runserver 
